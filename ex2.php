@@ -30,10 +30,6 @@
         <br/>Pays<br/>
         <SELECT name='pays'>
           <?php
-          $link = mysqli_connect("dwarves.iut-fbleau.fr","navales","JwLy54NVALVQDRAn","navales");
-          if(!$link){
-            die("<p>Connexion au serveur impossible</p>");
-          }
           $res = mysqli_query($link,"select distinct code from Pays");
           foreach($res as $value){
             echo "<option value=".$value['code'].">".$value['code'];
